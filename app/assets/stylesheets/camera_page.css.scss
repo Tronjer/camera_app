@@ -1,9 +1,8 @@
 @import "twitter/bootstrap";
 
 $footer_push: 35px;
-$screen-sm-min: 768px;
-$screen-md-min: 992px;
-$screen-lg-min: 1200px;
+$max_height: 640px;
+
 
 html, body {
     height: 100%;
@@ -38,9 +37,38 @@ body.camera_page.index {
 		}
 	}
 
-	.trigger {
-		img {
+	.backside {
+		.texture {
 			width: 130px;
+			display: block;
+		}
+
+		p {
+			font-family: 'Medula One', cursive;
+			font-size: 200%;
+			letter-spacing: 1px;
+			text-align: center;
+			max-width: 127px;
+		}
+
+		.shadow_1 {
+			margin-top: -150px;
+			line-height: 100%;
+			text-shadow: 2px 1px 2px #F8E7BB;
+		}
+
+		.shadow_2 {
+			display: none;
+			line-height: 90%;
+			text-shadow: 2px 1px 2px #BAA46F;
+		}
+
+		.trigger_button {
+			width: 50px;
+			display: block;
+			margin: auto;
+			cursor: pointer;
+			z-index: 2;
 		}
 	}
 
@@ -137,12 +165,12 @@ body.camera_page.index {
 
 			.display {
 				img {
-					width: 231px;
+					width: 224px;
 				}
 			}
 
-			.trigger {
-				img {
+			.backside {
+				.texture {
 					width: 127px;
 				}
 			}
@@ -160,19 +188,34 @@ body.camera_page.index {
 
 			.display {
 				img {
-					width: 283px;
+					width:278px;
 				}
 			}
 
-			.trigger {
-				img {
+			.backside {
+				.texture {
 					width: 158px;
+				}
+
+				p {
+					max-width: none;
+				}
+
+				.shadow_1 {
+					margin-top: -190px;
+				}
+
+				.shadow_2 {
+					display: block;
+					margin-top: -5px;
+				}
+
+				.trigger_button {
+					margin-top: -5px;
 				}
 			}
 
 			.pictures {
-				margin-top: 50px;
-
 				.photo {
 
 					p {
@@ -206,9 +249,26 @@ body.camera_page.index {
 				}
 			}
 
-			.trigger {
-				img {
+			.backside {
+				.texture {
 					width: 213px;
+				}
+
+				p {
+					font-size: 230%;
+				}
+
+				.shadow_1 {
+					margin-top: -250px;
+					margin-bottom: 20px;
+				}
+
+				.shadow_2 {
+					margin-top: 5px;
+				}
+
+				.trigger_button {
+					width: 60px;
 				}
 			}
 
@@ -246,9 +306,23 @@ body.camera_page.index {
 				}
 			}
 
-			.trigger {
-				img {
+			.backside {
+				.texture {
 					width: 263px;
+				}
+
+				p {
+					font-size: 280%;
+				}
+
+				.shadow_1 {
+					margin-top: -310px;
+				}
+
+				.shadow_2 {}
+
+				.trigger_button {
+					width: 80px;
 				}
 			}
 
@@ -268,7 +342,7 @@ body.camera_page.index {
 		}
 	}
 
-	@media (min-width: $screen-md-min) and (max-height: 640px) {
+	@media (min-width: $screen-xs-min) and (max-height: $max_height) {
 		body.camera_page.index {
 			header {
 				margin-bottom: 0;
