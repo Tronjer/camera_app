@@ -1,0 +1,2 @@
+module CameraPageHelper
+end

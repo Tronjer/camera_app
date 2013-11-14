@@ -1,0 +1,35 @@
+<% provide(:title, 'Camera App') %>
+
+<div id="wrap">
+	<div class="container">
+
+	<header class="masthead">
+		<%= image_tag("redribbon_2.png", width: "100%", alt: "Banner") %>
+	</header>
+
+	<section class="row">
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 camera">
+			<%= image_tag("woodcam.png", alt: "Camera") %>
+		</div>
+		<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 display">
+			<%= image_tag("display.png", alt: "Display") %>
+		</div>
+		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 trigger">
+			<%= image_tag("backside.png", alt: "Trigger") %>
+		</div>
+	</section>
+
+	<section class="row pictures">
+		<% (1..6).each do |n| %>
+			<%= content_tag :div, id: "image_#{n}", class: " col-xs-3 col-md-2 photo" do %>
+				<%= content_tag :p do %>
+					<%= image_tag("quest.png", alt: "question_mark") %>
+				<% end %>
+			<% end %>
+		<% end %>
+	</section>
+
+	</div>
+</div>
+
+<%= render 'layouts/footer' %>

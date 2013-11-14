@@ -1,0 +1,281 @@
+@import "twitter/bootstrap";
+
+$footer_push: 35px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+html, body {
+    height: 100%;
+}
+
+body.camera_page.index {
+
+	background-image: url("denim.png");
+	min-width: 640px;
+
+	#wrap {
+	  height: auto;
+	  margin: 0 auto (-$footer_push);
+	  min-height: 100%;
+	  padding: 0 0 $footer_push;
+	}
+
+	header {
+		margin: 15px 0 10px;
+		text-align: center;
+	}
+
+	.camera {
+		img {
+			width: 183px;
+		}
+	}
+
+	.display {
+		img {
+			width: 237px;
+		}
+	}
+
+	.trigger {
+		img {
+			width: 130px;
+		}
+	}
+
+	.pictures {
+		margin-top: 40px;
+
+		.photo {
+
+			margin-bottom: 20px;
+
+			&:nth-child(1), &:nth-child(3) {
+				-webkit-transform: rotate(-2deg);
+				transform: rotate(-2deg);
+			}
+
+			&:nth-child(2) {
+				-webkit-transform: none;
+				transform: none;
+				top: 20px;
+			}
+
+			&:nth-child(4) {
+				-webkit-transform: rotate(-6deg);
+				transform: rotate(-6deg);
+				top: 15px;
+			}
+
+			&:nth-child(5) {
+				-webkit-transform: rotate(2deg);
+				transform: rotate(2deg);
+				top: 10px;
+			}
+
+			&:nth-child(5), &:nth-child(6) {
+					display: none;
+				}
+
+			p {
+				background-color: #f9f9e0;
+				padding: 0 15px;
+				height: 100px;
+				box-shadow: 0px 5px 10px 2px #222;
+				-webkit-box-shadow: 0px 5px 10px 2px #222;
+
+				&:hover {
+					-webkit-transform: scale(1.25);
+					transform: scale(1.25);
+				}
+
+				img {
+					width: 65px;
+					margin: 15px 0 0 20px;
+				}
+			}
+		}
+	}
+
+	footer {
+    background-color: #8B141A;
+    height: $footer_push;
+
+    .container {
+    	text-align: center;
+
+    	p {
+				span {
+					vertical-align: sub;
+				}
+    	}
+
+    	a {
+    		color: #999;
+    	}
+    }
+	}
+}
+
+	/********************
+	/*** Media Queries **
+	********************/
+
+	@media (min-width: $screen-xs-min) {
+		body.camera_page.index {
+
+			header {
+				margin-bottom: 20px;
+			}
+
+			.camera {
+				img {
+					width: 179px;
+				}
+			}
+
+			.display {
+				img {
+					width: 231px;
+				}
+			}
+
+			.trigger {
+				img {
+					width: 127px;
+				}
+			}
+		}
+	}
+
+	@media (min-width: $screen-sm-min) {
+		body.camera_page.index {
+
+			.camera {
+				img {
+					width: 220px;
+				}
+			}
+
+			.display {
+				img {
+					width: 283px;
+				}
+			}
+
+			.trigger {
+				img {
+					width: 158px;
+				}
+			}
+
+			.pictures {
+				margin-top: 50px;
+
+				.photo {
+
+					p {
+						height: 110px;
+
+						img {
+							margin: 20px 0 0 30px;
+						}
+					}
+
+					&:nth-child(5), &:nth-child(6) {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	@media (min-width: $screen-md-min) {
+		body.camera_page.index {
+
+			.camera {
+				img {
+					width: 296px;
+				}
+			}
+
+			.display {
+				img {
+					width: 374px;
+				}
+			}
+
+			.trigger {
+				img {
+					width: 213px;
+				}
+			}
+
+			.pictures {
+				.photo {
+
+					p {
+						height: 100px;
+
+						img {
+							margin: 15px 0 0 20px;
+						}
+					}
+
+					&:nth-child(5), &:nth-child(6) {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+
+	@media (min-width: $screen-lg-min) {
+		body.camera_page.index {
+
+			.camera {
+				img {
+					width: 360px
+				}
+			}
+
+			.display {
+				img {
+					width: 458px;
+				}
+			}
+
+			.trigger {
+				img {
+					width: 263px;
+				}
+			}
+
+			.pictures {
+				.photo {
+
+					p {
+						height: 120px;
+
+						img {
+							width: 75px;
+							margin: 20px 0 0 25px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media (min-width: $screen-md-min) and (max-height: 640px) {
+		body.camera_page.index {
+			header {
+				margin-bottom: 0;
+			}
+
+			.pictures {
+				margin-top: 20px;
+			}
+		}
+	}
