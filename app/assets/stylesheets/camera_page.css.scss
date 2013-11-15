@@ -3,9 +3,8 @@
 $footer_push: 35px;
 $max_height: 640px;
 
-
 html, body {
-    height: 100%;
+  height: 100%;
 }
 
 body.camera_page.index {
@@ -21,8 +20,12 @@ body.camera_page.index {
   }
 
   header {
+    background-image: url("red_ribbon.png");
+    background-repeat: no-repeat;
+    background-size: contain;
     margin: 15px 0 10px;
     text-align: center;
+    height: 140px;
   }
 
   .camera {
@@ -32,8 +35,16 @@ body.camera_page.index {
   }
 
   .display {
+
     img {
       width: 237px;
+      z-index: 2;
+      position: relative;
+    }
+
+    video {
+      border-radius: 8px;
+      margin-top: 20px;
     }
   }
 
@@ -146,9 +157,19 @@ body.camera_page.index {
   }
 }
 
-  /********************
-  /*** Media Queries **
-  ********************/
+  /************************************
+  /***** Media Queries *****
+  ************************************/
+
+  @media (max-width: $screen-xs-min) {
+    body.camera_page.index {
+      .display {
+        video {
+          display: none;
+        }
+      }
+    }
+  }
 
   @media (min-width: $screen-xs-min) {
     body.camera_page.index {
@@ -164,8 +185,16 @@ body.camera_page.index {
       }
 
       .display {
+
+        video {
+          width: 205px;
+          height: 155px;
+          margin-left: 10px;
+        }
+
         img {
           width: 224px;
+          margin-top: -200px
         }
       }
 
@@ -187,8 +216,16 @@ body.camera_page.index {
       }
 
       .display {
+
+        video {
+          width: 260px;
+          height: 195px;
+          margin-top: 25px;
+        }
+
         img {
           width:278px;
+          margin-top: -245px;
         }
       }
 
@@ -238,14 +275,22 @@ body.camera_page.index {
     body.camera_page.index {
 
       .camera {
+
         img {
           width: 296px;
         }
       }
 
       .display {
+
+        video {
+          height: 270px;
+          width: 350px;
+        }
+
         img {
           width: 374px;
+          margin-top: -320px;
         }
       }
 
@@ -294,35 +339,28 @@ body.camera_page.index {
   @media (min-width: $screen-lg-min) {
     body.camera_page.index {
 
-      .camera {
-        img {
-          width: 360px
-        }
+      header {
+        background-image: url("red_ribbon_2.png");
       }
 
       .display {
+
+        video {
+          margin-left: 40px;
+        }
+
         img {
-          width: 458px;
+          margin-left: 30px;
         }
       }
 
       .backside {
         .texture {
-          width: 263px;
+          margin-left: 45px;
         }
 
         p {
-          font-size: 280%;
-        }
-
-        .shadow_1 {
-          margin-top: -310px;
-        }
-
-        .shadow_2 {}
-
-        .trigger_button {
-          width: 80px;
+          margin-left: 35px;
         }
       }
 
@@ -344,6 +382,7 @@ body.camera_page.index {
 
   @media (min-width: $screen-xs-min) and (max-height: $max_height) {
     body.camera_page.index {
+
       header {
         margin-bottom: 0;
       }
