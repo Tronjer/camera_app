@@ -59,7 +59,6 @@ $(document).ready(function() {
 
     function playClickSound() {
       audio.play();
-
     };
 
     function colorizePhotos() {
@@ -78,11 +77,15 @@ $(document).ready(function() {
       if ( navigator.userAgent.match('Chrome') ) {
         takepicture();
         $('.image')
-                 .prop('src', $('#photo').prop('src'))
-                 .addClass('snap_shot');
+                   .prop('src', $('#photo').prop('src'))
+                   .addClass('snap_shot');
         colorizePhotos();
       };
     };
+
+    if ( !navigator.userAgent.match('Chrome') ) {
+      $('.modal').modal('show')
+    }
 
     $(button).hover(
       function() {
@@ -91,7 +94,7 @@ $(document).ready(function() {
       function() {
         $(this).prop('src', image_path + 'button.png')
       }
-    )
+    );
 
     $(button).on('click', function(){
       grabImage();

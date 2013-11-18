@@ -12,6 +12,14 @@ body.camera_page.index {
   background-image: url("denim.png");
   min-width: 640px;
 
+  .modal-footer {
+    margin-top: 0;
+  }
+
+  .modal-body {
+    padding-bottom: 10px;
+  }
+
   #wrap {
     height: auto;
     margin: 0 auto (-$footer_push);
