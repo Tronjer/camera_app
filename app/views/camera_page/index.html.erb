@@ -7,6 +7,9 @@
 
     <section class="row">
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 camera">
+        <canvas width="200px" height="150px"></canvas>
+        <p class="photo_container"><img src="" id="photo"></p>
+        <%= audio_tag("cam.ogg") %>
         <%= image_tag("woodcam.png", alt: "Camera") %>
       </div>
       <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 display">
@@ -22,10 +25,10 @@
     </section>
 
     <section class="row pictures">
-      <% (1..6).each do |n| %>
-        <%= content_tag :div, id: "image_#{n}", class: " col-xs-3 col-md-2 photo" do %>
+      <% (0..5).each do |n| %>
+        <%= content_tag :div, class: " col-xs-3 col-md-2 photo" do %>
           <%= content_tag :p do %>
-            <%= image_tag("quest.png", alt: "question_mark") %>
+            <%= image_tag("quest_2.png", id: "image_#{n}", class: "image", alt: "question_mark") %>
           <% end %>
         <% end %>
       <% end %>

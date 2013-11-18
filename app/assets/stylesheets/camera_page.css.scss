@@ -25,10 +25,15 @@ body.camera_page.index {
     background-size: contain;
     margin: 15px 0 10px;
     text-align: center;
-    height: 140px;
+    height:100px;
   }
 
   .camera {
+
+    canvas, .photo_container {
+      display: none;
+    }
+
     img {
       width: 183px;
     }
@@ -96,8 +101,8 @@ body.camera_page.index {
       }
 
       &:nth-child(2) {
-        -webkit-transform: none;
-        transform: none;
+        -webkit-transform: rotate(-4deg);
+        transform: rotate(-4deg);
         top: 20px;
       }
 
@@ -114,8 +119,8 @@ body.camera_page.index {
       }
 
       &:nth-child(5), &:nth-child(6) {
-          display: none;
-        }
+        display: none;
+      }
 
       p {
         background-color: #f9f9e0;
@@ -132,6 +137,12 @@ body.camera_page.index {
         img {
           width: 65px;
           margin: 15px 0 0 20px;
+
+          &.snap_shot {
+            margin-left: -10px;
+            margin-top: 5px;
+            width: 120px;
+          }
         }
       }
     }
@@ -163,6 +174,7 @@ body.camera_page.index {
 
   @media (max-width: $screen-xs-min) {
     body.camera_page.index {
+
       .display {
         video {
           display: none;
@@ -173,10 +185,6 @@ body.camera_page.index {
 
   @media (min-width: $screen-xs-min) {
     body.camera_page.index {
-
-      header {
-        margin-bottom: 20px;
-      }
 
       .camera {
         img {
@@ -239,7 +247,7 @@ body.camera_page.index {
         }
 
         .shadow_1 {
-          margin-top: -190px;
+          margin-top: -195px;
         }
 
         .shadow_2 {
@@ -260,6 +268,11 @@ body.camera_page.index {
 
             img {
               margin: 20px 0 0 30px;
+
+              &.snap_shot {
+                width: 147px;
+                height: 100px;
+              }
             }
           }
 
@@ -273,6 +286,10 @@ body.camera_page.index {
 
   @media (min-width: $screen-md-min) {
     body.camera_page.index {
+
+      header {
+        height: 140px;
+      }
 
       .camera {
 
@@ -325,6 +342,11 @@ body.camera_page.index {
 
             img {
               margin: 15px 0 0 20px;
+
+              &.snap_shot {
+                width: 121px;
+                height: 90px;
+              }
             }
           }
 
@@ -373,6 +395,11 @@ body.camera_page.index {
             img {
               width: 75px;
               margin: 20px 0 0 25px;
+
+              &.snap_shot {
+                width: 155px;
+                height: 110px;
+              }
             }
           }
         }

@@ -13,6 +13,5 @@ Bundler.require(:default, Rails.env)
 
 module CameraApp
   class Application < Rails::Application
-    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
   end
 end
