@@ -1,7 +1,4 @@
 <% provide(:title, 'Camera App') %>
-<% content_for :head do %>
-  <meta charset="utf-8">
-<% end %>
 
 <div id="wrap">
   <div class="container">
@@ -28,7 +25,7 @@
     <section class="row">
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 camera">
         <canvas width="200" height="150"></canvas>
-        <p class="photo_container"><img src="quest.png" id="photo" alt="photo"></p>
+        <p class="photo_container"><img id="photo"></p>
         <%= audio_tag("cam.ogg") %>
         <%= image_tag("woodcam.png", alt: "Camera") %>
       </div>
