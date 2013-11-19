@@ -13,7 +13,7 @@
             <h4 class="modal-title">Notice</h4>
           </div>
           <div class="modal-body">
-            <p>This page requires a Webcam and Google Chrome in order to work properly.</p>
+            <p>This page requires a Webcam and either Google Chrome or Mozilla Firefox in order to take photos.</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -44,8 +44,8 @@
     <section class="row pictures">
       <% (0..5).each do |n| %>
         <%= content_tag :div, class: " col-xs-3 col-md-2 photo" do %>
-          <%= content_tag :p do %>
-            <%= image_tag("quest_2.png", id: "image_#{n}", class: "image", alt: "question_mark") %>
+          <%= content_tag :p, id: "image_#{n}" do %>
+            <%= image_tag("quest_2.png", class: "image", alt: "question_mark") %>
           <% end %>
         <% end %>
       <% end %>

@@ -16,3 +16,4 @@
 //= require twitter/bootstrap/modal
 //= require vintage
 //= require camera_page
+//= require camera_script
