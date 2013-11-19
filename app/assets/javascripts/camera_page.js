@@ -10,7 +10,7 @@ $(document).ready(function() {
 
   $('.trigger_button').hover(
     function() {
-      $(this).prop('src', image_path + 'button_2.png')
+      $(this).prop('src', image_path + 'button_red.png')
     },
     function() {
       $(this).prop('src', image_path + 'button.png')
