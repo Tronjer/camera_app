@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-  var image_path = 'assets/'
-
   if ( !navigator.userAgent.match('Chrome') ) {
     if ( !navigator.userAgent.match('Firefox') ) {
       $('.modal').modal('show');
@@ -10,10 +8,10 @@ $(document).ready(function() {
 
   $('.trigger_button').hover(
     function() {
-      $(this).prop('src', image_path + 'button_red.png')
+      $(this).prop('src', "<%= asset_path('button_red.png') %>")
     },
     function() {
-      $(this).prop('src', image_path + 'button.png')
+      $(this).prop('src', "<%= asset_path('button.png') %>")
     }
   );
 })

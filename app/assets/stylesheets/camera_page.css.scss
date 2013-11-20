@@ -9,7 +9,7 @@ html, body {
 
 body.camera_page.index {
 
-  background-image: url("textile.png");
+  background-image: asset-url("textile.png");
   min-width: 640px;
 
   .modal-footer {
@@ -28,7 +28,7 @@ body.camera_page.index {
   }
 
   header {
-    background-image: url("red_ribbon.png");
+    background-image: asset-url("red_ribbon.png");
     background-repeat: no-repeat;
     background-size: contain;
     margin: 15px 0 10px;
@@ -370,7 +370,7 @@ body.camera_page.index {
     body.camera_page.index {
 
       header {
-        background-image: url("large_ribbon.png");
+        background-image: asset-url("large_ribbon.png");
       }
 
       .display {
