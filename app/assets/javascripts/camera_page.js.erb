@@ -1,17 +1,15 @@
 $(document).ready(function() {
 
-  if ( !navigator.userAgent.match('Chrome') ) {
-    if ( !navigator.userAgent.match('Firefox') ) {
-      $('.modal').modal('show');
-    }
+  if ( !navigator.userAgent.match('Chrome') && !navigator.userAgent.match('Firefox') ) {
+    $('.modal').modal('show');
   }
 
   $('.trigger_button').hover(
     function() {
-      $(this).prop('src', "<%= asset_path('button_red.png') %>")
+      $(this).prop('src', "<%= asset_path('button_red.png') %>");
     },
     function() {
-      $(this).prop('src', "<%= asset_path('button.png') %>")
+      $(this).prop('src', "<%= asset_path('button.png') %>");
     }
   );
 })
