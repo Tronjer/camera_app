@@ -83,7 +83,7 @@ $(document).ready(function() {
     function refreshImages() {
       $('.photo p img').remove();
       for (var i = 0; i <= 5; i++) {
-        $('<img class="image" src="" alt="Photo">').appendTo( $('#image_' + i) );
+        $('<img class="image" src="">').appendTo( $('#image_' + i) );
       }
     };
 
