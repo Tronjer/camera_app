@@ -43,7 +43,7 @@
 
     <section class="row pictures">
       <% (0..5).each do |n| %>
-        <%= content_tag :div, class: " col-xs-3 col-md-2 photo" do %>
+        <%= content_tag :div, class: "col-xs-3 col-md-2 photo" do %>
           <%= content_tag :p, id: "image_#{n}" do %>
             <%= image_tag("quest_2.png", class: "image", alt: "question_mark") %>
           <% end %>
